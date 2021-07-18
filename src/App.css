@@ -1,4 +1,51 @@
-.App {
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --HEADER-WITDH: 12%;
+  --HEADER-ITEM-HEIGHT: 4.5vh;
+  --HEADER-ITEM-BACKGROUND-GRAY: rgb(60, 60, 60);
+  --HEADER-ITEM-BACKGROUND-DARKGRAY: rgb(50, 50, 50);
+  --HEADER-ITEM-BACKGROUND-BLUE: rgb(0, 105, 210);
+  --HEADER-ITEM-BACKGROUND-LDARKBLUE: rgb(0, 67, 134);
+  --HEADER-ITEM-BACKGROUND-DARKBLUE: rgb(30, 45, 60);
+
+  --HEADER-TRANSITION-DEFAULT-VALUE: 360ms;
+  --BODY-TRANSITION-DEFAULT-VALUE: 360ms;
+
+  --BODY-WIDTH: calc(100% - var(--HEADER-WITDH));
+  --BODY-BACKGROUND: rgb(99, 99, 99);
+
+  --DARK-GRAY-BACKGROUND: rgb(37, 37, 37);
+  --GRAY-BACKGROUND: rgb(71, 71, 71);
+  --LIGHT-GRAY-BACKGROUND: rgb(209, 209, 209);
+  --LIGHT-GREEN-BACKGROUND: rgb(102, 228, 0);
+  --DARK-GREEN-BACKGROUND: rgb(50, 110, 1);
+  --GREEN-BACKGROUND: rgb(75, 165, 1);
+  --LIGHT-RED-BACKGROUND: rgb(230, 61, 61);
+  --DARK-RED-BACKGROUND: rgb(143, 0, 0);
+  --RED-BACKGROUND: rgb(189, 16, 16);
+
+  --DEFAULT-FONT-COLOR: white;
+  --RED-FONT-COLOR: rgb(100, 0, 0);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +82,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/

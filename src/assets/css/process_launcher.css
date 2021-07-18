@@ -1,0 +1,94 @@
+.process-launcher {
+    display: grid;
+    grid-template-areas: 
+        "plleft plright"; 
+    grid-template-columns: 70% auto;
+}
+
+.process-launcher-list {
+    overflow-y: auto;
+    margin: 3vh;
+}
+
+.process-launcher-list::-webkit-scrollbar {
+    display: none;
+}
+
+.process-launcher-list-item {
+    display: grid;
+    height: 4.5vh;
+    grid-template-areas: 
+        "ppath pport pbtn1 pbtn2"; 
+    grid-template-columns: auto auto 4.5vh 4.5vh;
+    background-color: var(--GRAY-BACKGROUND);
+    margin: 1vh;
+}
+
+.ppath {
+    grid-area: ppath;
+    user-select: none;
+}
+
+.pport {
+    grid-area: pport;
+    user-select: none;
+}
+
+.pbtn1 {
+    grid-area: pbtn1;
+}
+
+.pbtn2 {
+    grid-area: pbtn2;
+}
+
+.pbtn3 {
+    grid-area: pbtn3;
+}
+
+.process-launcher-list-item-btn-img {
+    height: 4vh;
+    width: 4vh;
+}
+
+.pbtn {
+    transition: var(--BODY-TRANSITION-DEFAULT-VALUE);
+    user-select: none;
+}
+
+.pbtn:hover {
+    background-color: var(--HEADER-ITEM-BACKGROUND-DARKBLUE);
+    color: var(--HEADER-ITEM-BACKGROUND-BLUE);
+}
+
+.pbtn:active {
+    background-color: var(--HEADER-ITEM-BACKGROUND-LDARKBLUE);
+    color: var(--HEADER-ITEM-BACKGROUND-DARKBLUE);
+}
+
+.pbtn > .bi {
+    width: 3vh;
+    height: 3vh;
+}
+
+.process-launcher-list-add-path {    
+    display: grid;
+    height: 4.5vh;
+    grid-template-areas: 
+        "ppath pport pbtn1"; 
+    grid-template-columns: auto 10vh 4.5vh;
+    background-color: var(--GRAY-BACKGROUND);
+    margin: 1vh;
+}
+
+.process-launcher-list-add-input {
+    background: none;
+    border: none;
+    outline: none; 
+    text-align: center;
+    text-align-last: center;   
+}
+
+.process-launcher-list-add-input:focus{
+    background-color: var(--HEADER-ITEM-BACKGROUND-LDARKBLUE);
+}

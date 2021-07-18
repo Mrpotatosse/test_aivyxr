@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+if(!process.env.REACT_APP_BACKEND_URL){
+  process.env.REACT_APP_BACKEND_URL = 'http://localhost:5000';
+}
+if(!process.env.REACT_APP_BACKEND_WS_URL){
+  process.env.REACT_APP_BACKEND_WS_URL = 'ws://localhost:3030';
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

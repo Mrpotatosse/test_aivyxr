@@ -1,0 +1,52 @@
+.scripts-list {
+    display: grid;
+    grid-template-areas: 
+        "plleft plright"; 
+    grid-template-columns: 70% auto;
+}
+
+.scripts-list-ul {
+    overflow-y: auto;
+    margin: 3vh;
+}
+
+.scripts-list-add-li {
+    display: grid;
+    height: 4.5vh;
+    grid-template-areas: 
+        "slname slurl slbtn"; 
+    grid-template-columns: 40% auto 4.5vh;
+    background-color: var(--GRAY-BACKGROUND);
+    margin: 1vh;
+}
+
+.scripts-list-add-input {
+    background: none;
+    border: none;
+    outline: none; 
+    text-align: center;
+    text-align-last: center;   
+}
+
+.scripts-list-add-input:focus{
+    background-color: var(--HEADER-ITEM-BACKGROUND-LDARKBLUE);
+}
+
+.slbtn > .bi {
+    width: 3vh;
+    height: 3vh;
+}
+
+.slurl {
+    color: black;
+}
+
+.scripts-list-item {
+    display: grid;
+    height: 4.5vh;
+    grid-template-areas: 
+        "slname slurl slbtn1 slbtn2"; 
+    grid-template-columns: 40% auto 4.5vh 4.5vh;
+    background-color: var(--GRAY-BACKGROUND);
+    margin: 1vh;
+}

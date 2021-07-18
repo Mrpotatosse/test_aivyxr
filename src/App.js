@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import store from './redux/store';
+import HeaderListStore from './components/HeaderList';
+import Body from './components/Body';
+
+import './App.css';
+import { useCallback, useEffect } from 'react';
+
+function App(){
+  const message_log_show = useCallback(data => {
+    const data_parsed = JSON.parse(data.data);
+    if(data_parsed.type === 'message_log'){
+      //console.log(data_parsed.data.message); // useless look message from: Inspect element -> Network -> WS -> localhost directly
+    }
+  }, []);
+
+  useEffect(() => {
+    let client = new WebSocket(`${process.env.REACT_APP_BACKEND_WS_URL}`);
+
+    client.addEventListener('message', message_log_show);
+
+    return () => {
+      client.removeEventListener('message', message_log_show);
+    }
+  }, [message_log_show]);  
+
+  return <Provider store={store}>
+    <BrowserRouter>
+      <HeaderListStore/>
+      <Body/>
+    </BrowserRouter>
+  </Provider>
 }
 
 export default App;

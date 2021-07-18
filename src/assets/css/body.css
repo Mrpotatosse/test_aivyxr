@@ -1,0 +1,11 @@
+.body {
+    float: right;
+    width: var(--BODY-WIDTH);
+    height: 100%;
+    background-color: var(--BODY-BACKGROUND);
+    overflow-y: auto;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}

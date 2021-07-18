@@ -1,0 +1,44 @@
+.header-ul {
+    width: var(--HEADER-WITDH);
+    height: 100%;
+    float: left;
+    overflow-y: scroll;
+    background-color: var(--HEADER-ITEM-BACKGROUND-GRAY);
+}
+
+.li-bg-even {
+    background-color: var(--HEADER-ITEM-BACKGROUND-GRAY);
+}
+
+.li-bg-odd {
+    background-color: var(--HEADER-ITEM-BACKGROUND-DARKGRAY);
+}
+
+.header-ul > li > a {
+    width: 100%;
+    height: var(--HEADER-ITEM-HEIGHT);
+    color: var(--DEFAULT-FONT-COLOR);
+    transition: var(--HEADER-TRANSITION-DEFAULT-VALUE);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.header-ul > li > a > .bi {
+    width: 3vh;
+    height: 3vh;
+}
+
+.header-ul > li > a:hover {
+    background-color: var(--HEADER-ITEM-BACKGROUND-DARKBLUE);
+    color: var(--HEADER-ITEM-BACKGROUND-BLUE);
+}
+
+.header-ul > li > a:active {
+    background-color: var(--HEADER-ITEM-BACKGROUND-LDARKBLUE);
+    color: var(--HEADER-ITEM-BACKGROUND-DARKBLUE);
+}
+
+.header-ul::-webkit-scrollbar {
+    display: none;
+}
