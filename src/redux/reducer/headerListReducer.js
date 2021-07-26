@@ -7,22 +7,26 @@ const initialState = [
     {
         id: 1,
         link: '/',
-        icon: <Home/>
+        icon: <Home/>,
+        is_const: true
     },    
     {
         id: 2,
         link: '/servers',
-        icon: <Server/>
+        icon: <Server/>,
+        is_const: true
     },
     {
         id: 3,
         link: '/play',
-        icon: <Play/>
+        icon: <Play/>,
+        is_const: true
     },
     {
         id: 4,
         link: '/scripts',
-        icon: <FileTxt/>
+        icon: <FileTxt/>,
+        is_const: true
     }
 ]
 

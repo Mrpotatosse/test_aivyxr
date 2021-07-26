@@ -37,3 +37,20 @@ export const headerListFetchAction = () => dispatch => {
         dispatch(headerListAddListAction(data));
     });
 };
+
+export const headerListFetchDofusCharacters = () => dispatch => {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/dofus/characters/list`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        const mapped_data = data.map(x => ({
+            title: x.character.name,
+            link: `/dofus/characters/${x.character.id}`
+        }));
+        dispatch(headerListAddListAction(mapped_data));
+    });
+}

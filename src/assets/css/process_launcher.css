@@ -19,7 +19,7 @@
     height: 4.5vh;
     grid-template-areas: 
         "ppath pport pbtn1 pbtn2"; 
-    grid-template-columns: auto auto 4.5vh 4.5vh;
+    grid-template-columns: auto 15vh 4.5vh 4.5vh;
     background-color: var(--GRAY-BACKGROUND);
     margin: 1vh;
 }
@@ -76,7 +76,7 @@
     height: 4.5vh;
     grid-template-areas: 
         "ppath pport pbtn1"; 
-    grid-template-columns: auto 10vh 4.5vh;
+    grid-template-columns: auto 15vh 4.5vh;
     background-color: var(--GRAY-BACKGROUND);
     margin: 1vh;
 }

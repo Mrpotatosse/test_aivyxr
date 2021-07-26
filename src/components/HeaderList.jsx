@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import '../assets/css/header.css';
 
 import { headerListSelector } from '../redux/selector';
-import { headerListFetchAction } from '../redux/action/headerListAction';
+import { headerListFetchAction, headerListFetchDofusCharacters } from '../redux/action/headerListAction';
 
 function HeaderListItem({ item, className }){
     return <li>
@@ -26,6 +26,7 @@ export default function HeaderListStore(){
     
     useEffect(() => {
         dispatch(headerListFetchAction());
+        dispatch(headerListFetchDofusCharacters());
     }, [dispatch]);
 
     return <HeaderList list={list}/>
